@@ -73,9 +73,9 @@ col1, col2 = st.columns(2)
 
 if conversion_type == "Length":
     with col1:
-        from_unit = st.selectbox("Form", ["Meters", "Kilograms", "Centimeters", "Milimeters","Miles", "Yards","Inches","Feet"])
+        from_unit = st.selectbox("Form", ["Meters", "Kilometers", "Centimeters", "Milimeters","Miles", "Yards","Inches","Feet"])
     with col2:
-        to_unit = st.selectbox("To", ["Meters", "Kilograms", "Centimeters", "Milimeters","Miles", "Yards","Inches","Feet"])
+        to_unit = st.selectbox("To", ["Meters", "Kilometers", "Centimeters", "Milimeters","Miles", "Yards","Inches","Feet"])
 
 elif conversion_type == "Weight":
     with col1:
@@ -113,8 +113,6 @@ def weight_conversion(value, from_unit, to_unit):
         "Quintals": 100.0,
         "Stones": 6.35029,
         "Carats": 0.0002,
-        "Pounds": 0.453592,
-        "Ounces": 0.0283495,
         "Milligrams": 0.001,
     }
     return value * weight_units[from_unit] / weight_units[to_unit]
@@ -148,6 +146,15 @@ if st.button("Convert"):
 
 #footer
 st.markdown("<p class='footer'>Made with ❤️ by <a href='https://github.com/raeespisces'>Muhammad Raees Alam</a></p>", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
 
 
 
